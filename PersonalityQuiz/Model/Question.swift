@@ -38,7 +38,7 @@ struct Question {
                 Answer(titel: "Без разницы",animal: .rabbit),
                 Answer(titel: "Обожаю",animal: .dog)
              ],
-             type: ResponseType.single)
+                type: ResponseType.range)
         ]
     }
 }
@@ -63,15 +63,14 @@ enum Animal: Character {
     
     var definition: String {
         switch self {
-      
         case .dog:
-            return "Ты пёс"
+            return "Вам нравится быть с друзьями. Вы окружаете себя людьми, которые вам нравятся и всегда готовы помочь."
         case .cat:
-            return "Ты киска"
+            return "Вы себе на уме. Любите гулять сами по себе. Вы цените одиночество."
         case .rabbit:
-            return "Ты заяц"
+            return "Вам нравится все мягкое. Вы здоровы и полны энергии."
         case .turtle:
-            return "Ты тормоз"
+            return "Ваша сила - в мудрости. Медленный и вдумчивый выигрывает на больших дистанциях."
         }
     }
     
